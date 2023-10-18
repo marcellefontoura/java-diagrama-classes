@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface NavegadorNaInternet{
+    +exibirPagina()
+    +adicionarNovaAba()
+    +atualizarPagina()
+}
+interface ReprodutorMusical{
+    +tocar()
+    +pausar()
+    +selecionarMusica()
+}
+interface AparelhoTelefonico{
+    +ligar()
+    +atender()
+    +iniciarCorreioVoz()
+}
+
+class Iphone implements AparelhoTelefonico, ReprodutorMusical, NavegadorNaInternet  {
+    +ligar()
+    +atender()
+    +iniciarCorreioVoz()
+    +tocar()
+    +pausar()
+    +selecionarMusica()
+    +exibirPagina()
+    +adicionarNovaAba()
+    +atualizarPagina()
+}
+
+@enduml
